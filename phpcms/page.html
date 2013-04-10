@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="/ysk/css/master.css" rel="stylesheet" type="text/css" />
+<link href="/ysk/css/content.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+{template "content","header"}
+<div id="leftBox">
+	<h1 class="artTitle">{$title}</h1>
+  <div class="artInfo" style="height: 1px; overflow: hidden;">&nbsp;</div>
+  <div class="artCtn">{$content}</div>
+</div>
+{template "content","rightCtn"}
+{template "content","footer"}
+</body>
+</html>

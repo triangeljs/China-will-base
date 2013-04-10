@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="/ysk/css/master.css" rel="stylesheet" type="text/css" />
+<link href="/ysk/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+{template "content","header"}
+<div id="leftBox">
+	<div class="newsBox">
+    <div>
+      <h1><a href="{$CATEGORYS[6]['url']}" target="_blank">更多</a>要闻</h1>
+      {pc:content  action="lists" catid="6" order="listorder DESC" num="10"}
+      <ul>
+      	{loop $data $key $val}
+        <li><a href="{$val['url']}">{$val['title']}</a></li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div>
+  	{pc:content  action="lists" catid="6" order="listorder DESC" num="1" thumb="1"}
+    <dl>
+    	{loop $data $key $val}
+    	<dt><img src="{thumb($val[thumb],310,200)}" width="310" height="200" /></dt>
+      <dd><a href="{$val['url']}">{$val['title']}</a></dd>
+      {/loop}
+    </dl>
+    {/pc}
+  </div>
+  <div class="tab">
+  	<div class="leftTab">
+    	<h1><a href="{$CATEGORYS[7]['url']}" target="_blank">更多</a><span>遗嘱库介绍</span></h1>
+      {pc:content  action="lists" catid="7" order="listorder DESC" num="1" thumb="1"}
+      <dl>
+      	{loop $data $key $val}
+      	<dt><a href="{$val['url']}">{$val['title']}</a></dt>
+        <dd><img src="{thumb($val[thumb],140,100)}" width="140" height="100" /><a href="{$val['url']}">{$val['description']}</a></dd>
+        {/loop}
+      </dl>
+      {/pc}
+      {pc:content  action="lists" catid="7" order="listorder DESC" num="5"}
+      <ul>
+      	{loop $data $key $val}
+      	<li><a href="{$val['url']}">{$val['title']}</a></li>
+      	{/loop}
+      </ul>
+      {/pc}
+    </div>
+    <div class="rightTab">
+    	<h1><a href="{$CATEGORYS[8]['url']}" target="_blank"><span>领导关怀</span></h1>
+      {pc:content  action="lists" catid="8" order="listorder DESC" num="1" thumb="1"}
+      <dl>
+      	{loop $data $key $val}
+      	<dt><a href="{$val['url']}">{$val['title']}</a></dt>
+        <dd><img src="{thumb($val[thumb],140,100)}" width="140" height="100" /><a href="{$val['url']}">{$val['description']}</a></dd>
+        {/loop}
+      </dl>
+      {/pc}
+      {pc:content  action="lists" catid="8" order="listorder DESC" num="5"}
+      <ul>
+      	{loop $data $key $val}
+      	<li><a href="{$val['url']}">{$val['title']}</a></li>
+      	{/loop}
+      </ul>
+      {/pc}
+    </div>
+  </div>
+  <div class="picList">
+  	<h1><a href="{$CATEGORYS[12]['url']}" target="_blank"><span>图片报道</span></h1>
+    {pc:content  action="lists" catid="12" order="listorder DESC" num="4" thumb="1"}
+    <dl>
+    	<dt><img src="{thumb($val[thumb],150,120)}" width="150" height="120" /></dt>
+      <dd><a href="{$val['url']}">{$val['title']}</a></dd>
+    </dl>
+    {/pc}
+  </div>
+  <div class="tab">
+  	<div class="leftTab">
+    	<h1><a href="{$CATEGORYS[9]['url']}" target="_blank"><span>文件公告</span></h1>
+      {pc:content  action="lists" catid="9" order="listorder DESC" num="5"}
+      <ul>
+      	{loop $data $key $val}
+      	<li><a href="{$val['url']}">{$val['title']}</a></li>
+      	{/loop}
+      </ul>
+      {/pc}
+    </div>
+    <div class="rightTab">
+    	<h1><a href="{$CATEGORYS[11]['url']}" target="_blank"><span>媒体报道</span></h1>
+      {pc:content  action="lists" catid="11" order="listorder DESC" num="5"}
+      <ul>
+      	{loop $data $key $val}
+      	<li><a href="{$val['url']}">{$val['title']}</a></li>
+      	{/loop}
+      </ul>
+      {/pc}
+    </div>
+  </div>
+</div>
+{template "content","rightCtn"}
+{template "content","footer"}
+</body>
+</html>

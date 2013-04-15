@@ -52,7 +52,7 @@
       {/pc}
     </div>
     <div class="rightTab">
-    	<h1><a href="{$CATEGORYS[8]['url']}" target="_blank"><span>领导关怀</span></h1>
+    	<h1><a href="{$CATEGORYS[8]['url']}" target="_blank">更多</a><span>领导关怀</span></h1>
       {pc:content  action="lists" catid="8" order="listorder DESC" num="1" thumb="1"}
       <dl>
       	{loop $data $key $val}
@@ -71,7 +71,7 @@
     </div>
   </div>
   <div class="picList">
-  	<h1><a href="{$CATEGORYS[12]['url']}" target="_blank"><span>图片报道</span></h1>
+  	<h1><a href="{$CATEGORYS[12]['url']}" target="_blank">更多</a><span>图片报道</span></h1>
     {pc:content  action="lists" catid="12" order="listorder DESC" num="4" thumb="1"}
     <dl>
     	<dt><img src="{thumb($val[thumb],150,120)}" width="150" height="120" /></dt>
@@ -81,7 +81,7 @@
   </div>
   <div class="tab">
   	<div class="leftTab">
-    	<h1><a href="{$CATEGORYS[9]['url']}" target="_blank"><span>文件公告</span></h1>
+    	<h1><a href="{$CATEGORYS[9]['url']}" target="_blank">更多</a><span>文件公告</span></h1>
       {pc:content  action="lists" catid="9" order="listorder DESC" num="5"}
       <ul>
       	{loop $data $key $val}
@@ -91,7 +91,7 @@
       {/pc}
     </div>
     <div class="rightTab">
-    	<h1><a href="{$CATEGORYS[11]['url']}" target="_blank"><span>媒体报道</span></h1>
+    	<h1><a href="{$CATEGORYS[11]['url']}" target="_blank">更多</a><span>媒体报道</span></h1>
       {pc:content  action="lists" catid="11" order="listorder DESC" num="5"}
       <ul>
       	{loop $data $key $val}

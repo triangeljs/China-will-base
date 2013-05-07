@@ -26,7 +26,7 @@
   	{pc:content  action="lists" catid="6" order="listorder DESC" num="1" thumb="1"}
     <dl>
     	{loop $data $key $val}
-    	<dt><img src="{thumb($val[thumb],310,200)}" width="310" height="200" /></dt>
+    	<dt><a href="{$val['url']}"><img src="{thumb($val[thumb],310,200)}" width="310" height="200" /></a></dt>
       <dd><a href="{$val['url']}">{$val['title']}</a></dd>
       {/loop}
     </dl>
@@ -73,10 +73,12 @@
   <div class="picList">
   	<h1><a href="{$CATEGORYS[12]['url']}" target="_blank">更多</a><span>图片报道</span></h1>
     {pc:content  action="lists" catid="12" order="listorder DESC" num="4" thumb="1"}
+    {loop $data $key $val}
     <dl>
-    	<dt><img src="{thumb($val[thumb],150,120)}" width="150" height="120" /></dt>
+    	<dt><a href="{$val['url']}"><img src="{thumb($val[thumb],150,120)}" width="150" height="120" /></a></dt>
       <dd><a href="{$val['url']}">{$val['title']}</a></dd>
     </dl>
+    {/loop}
     {/pc}
   </div>
   <div class="tab">
